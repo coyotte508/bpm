@@ -1,11 +1,11 @@
 <template>
   <div id="app" @mousedown="touch" @touchstart="touch" :class="{ticking}">
-    <h1 class="pt-4">THE PULSOMETER</h1>
+    <h1 class="pt-4" style="left: 0; right: 0; position: absolute">THE PULSOMETER</h1>
 
-    <div style="flex-grow: 1"></div>
+    <div style="flex-grow: 1; min-height: 80px"></div>
 
-    <div style="flex-grow: 1">
-      <h3 class="my-3 bpm">{{BPM}}</h3>
+    <div>
+      <h3 class="mb-3 bpm">{{BPM}}</h3>
 
       <div class="manual">
         How many beats per Minute ? <br/>
