@@ -2,21 +2,26 @@
   <div id="app" @mousedown="touch" @touchstart="touch" :class="{ticking}">
     <h1 class="pt-4">THE PULSOMETER</h1>
 
-    <h3 class="my-3">BPM: {{BPM}}</h3>
+    <div style="flex-grow: 1"></div>
 
-    <div class="manual">
-      How many beats per Minute ? <br/>
-      Count the pulses :<br/>
-      One : Tap !<br/>
-      Two : Wait !<br/>
-      Three : Wait !<br/>
-      Four : Wait !<br/>
-      Five : Wait !<br/>
-      Six : Wait !<br/>
-      Seven : Tap !<br/>
-      ... and you'll know the BPM !<br/>
+    <div style="flex-grow: 1">
+      <h3 class="my-3 bpm">{{BPM}}</h3>
+
+      <div class="manual">
+        How many beats per Minute ? <br/>
+        Count the pulses :<br/>
+        One : Tap !<br/>
+        Two : Wait !<br/>
+        Three : Wait !<br/>
+        Four : Wait !<br/>
+        Five : Wait !<br/>
+        Six : Wait !<br/>
+        Seven : Tap !<br/>
+        ... and you'll know the BPM !<br/>
+      </div>
     </div>
 
+    <div style="flex-grow: 1"></div>
   </div>
 </template>
 
@@ -83,6 +88,9 @@ export default class App extends Vue {
     background-color: #D4FE5B;
   }
   transition-duration: 200ms;
+
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -91,7 +99,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   // Title
-  color: #2c3e50;
+  // color: #2c3e50;
+  color: white;
   text-shadow: -1px 1px #D4FE5B;
 }
 
@@ -101,8 +110,13 @@ h1 {
   transition-delay: 200ms;
 
   .ticking & {
-    opacity: 0;
+    // opacity: 0;
   }
+}
+
+.bpm {
+  font-size: 4em;
+  color: white;
 }
 
 html {
