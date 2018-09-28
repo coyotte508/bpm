@@ -1,4 +1,5 @@
 module.exports = {
+  baseUrl: '/pulsometer',
   pwa: {
     // Should only be enabled for IOS >= 11.3
     appleMobileWebAppCapable: 'yes',
