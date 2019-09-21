@@ -61,31 +61,28 @@ export default class App extends Vue {
 
 @import '~bootstrap/scss/bootstrap.scss';
 
-@font-face {
-  font-family: 'Nitti Normal';
-  src: url('/typefaces/nitti-normal-v500.eot') format('eot'),
-       url('/typefaces/nitti-normal-v500.woff') format('woff'),
-       url('/typefaces/nitti-normal-v500.woff2') format('woff2');
-}
+$background: white;
+$text: #444;
+$highlight: #B40486;
 
-@font-face {
-  font-family: 'Nitti Bold';
-  src: url('/typefaces/nitti-bold-v500.eot') format('eot'),
-       url('/typefaces/nitti-bold-v500.woff') format('woff'),
-       url('/typefaces/nitti-bold-v500.woff2') format('woff2');
-}
+@font-face {font-family:'HelveticaNowText';src:url('/typefaces/Helvetica-Now-Text-Light.woff') format('woff');font-style:normal;font-weight:300;}
+@font-face {font-family:'HelveticaNowText';src:url('/typefaces/Helvetica-Now-Text-Medium.woff') format('woff');font-style:normal;font-weight:500;}
+@font-face {font-family:'HelveticaNowText';src:url('/typefaces/Helvetica-Now-Text-Md-It.woff') format('woff');font-style:italic;font-weight:500;}
+@font-face {font-family:'HelveticaNowText';src:url('/typefaces/Helvetica-Now-Text-Bold.woff') format('woff');font-style:normal;font-weight:700;}
+@font-face {font-family:'HelveticaNowText';src:url('/typefaces/Helvetica-Now-Text-Bd-It.woff') format('woff');font-style:italic;font-weight:700;}
+
 
 #app {
-  font-family: 'Nitti Normal', Courier, Arial, monospace;
+  font-family: 'HelveticaNowText', helvetica neue, helvetica, sans; font-weight:500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   height: 100%;
 
-  background-color: #B40486;
+  background-color: $background;
 
   &.ticking {
-    background-color: #D4FE5B;
+    background-color: $highlight;
   }
   transition-duration: 200ms;
 
@@ -94,19 +91,19 @@ export default class App extends Vue {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Nitti Bold', Courier, Arial, monospace;
+  font-weight: 700;
 }
 
 h1 {
   // Title
   // color: #2c3e50;
-  color: white;
-  text-shadow: -1px 1px #D4FE5B;
+  color: $text;
+  text-shadow: -1px 1px $highlight;
 }
 
 
 .manual {
-  color: white;
+  color: $text;
   transition-delay: 200ms;
 
   .ticking & {
@@ -116,7 +113,7 @@ h1 {
 
 .bpm {
   font-size: 4em;
-  color: white;
+  color: $text;
 }
 
 html {
