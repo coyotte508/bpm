@@ -1,6 +1,6 @@
 <template>
   <div id="app" @mousedown="touch" @touchstart="touch" :class="{ticking}">
-    <h1 class="pt-4" style="left: 0; right: 0; position: absolute">THE PULSOMETER</h1>
+    <h1 class="pt-4" style="left: 0; right: 0; position: absolute; font-size: 3rem">THE PULSOMETER</h1>
 
     <div style="flex-grow: 1; min-height: 80px"></div>
 
@@ -61,9 +61,8 @@ export default class App extends Vue {
 
 @import '~bootstrap/scss/bootstrap.scss';
 
-$background: white;
-$text: #444;
-$highlight: #B40486;
+$background: #B40486;
+$text: WHITE;
 
 @font-face {font-family:'HelveticaNowText';src:url('/typefaces/Helvetica-Now-Text-Light.woff') format('woff');font-style:normal;font-weight:300;}
 @font-face {font-family:'HelveticaNowText';src:url('/typefaces/Helvetica-Now-Text-Medium.woff') format('woff');font-style:normal;font-weight:500;}
@@ -80,9 +79,11 @@ $highlight: #B40486;
   height: 100%;
 
   background-color: $background;
+  color: $text;
 
   &.ticking {
-    background-color: $highlight;
+    background-color: $text;
+    color: $background;
   }
   transition-duration: 200ms;
 
@@ -94,26 +95,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-h1 {
-  // Title
-  // color: #2c3e50;
-  color: $text;
-  text-shadow: -1px 1px $highlight;
-}
-
-
-.manual {
-  color: $text;
-  transition-delay: 200ms;
-
-  .ticking & {
-    // opacity: 0;
-  }
-}
-
 .bpm {
   font-size: 4em;
-  color: $text;
 }
 
 html {
