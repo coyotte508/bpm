@@ -1,6 +1,6 @@
 <template>
   <div id="app" @mousedown="touch" @touchstart="touch" :class="{ticking}">
-    <h1 class="pt-4" style="left: 0; right: 0; position: absolute; font-size: 3rem">THE PULSOMETER</h1>
+    <h1 class="pt-4" style="left: 0; right: 0; position: absolute; font-size: 3rem">The Pulsometer</h1>
 
     <div style="flex-grow: 1; min-height: 80px"></div>
 
